@@ -1,0 +1,13 @@
+{
+  "name": "megastar",
+  "version": "1.0.0",
+  "description": "megastar test page",
+  "author": "hzSenko",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2"
+  }
+}
