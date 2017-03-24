@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Megastar test page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="libs/normalize-css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-action">
             <div class="content-wrap">
                 <a href="#" class="header-action__lang">Languages: EN</a>
@@ -17,6 +19,13 @@
         </div>
         <div class="header-menu__wrap">
             <div class="content-wrap">
+                <div class="menu-hamburger__wrap">
+                    <div class="menu-hamburger" id="header-hamburger">
+                        <span class="icon-hamburger"></span>
+                        <span class="icon-hamburger"></span>
+                        <span class="icon-hamburger"></span>
+                    </div>
+                </div>
                 <ul class="header-menu">
                     <li class="header-menu__item"><a href="#">Publishers</a></li>
                     <li class="header-menu__item"><a href="#">Our Stats</a></li>
@@ -27,7 +36,7 @@
             </div>
         </div>
     </header>
-    <section class="page-feature">
+    <section class="page-feature" id="content">
         <div class="page-feature__item page-feature__item-slide-1">
             <div class="feature-info">
                 <div class="feature-title">Monetize your mobile traffic.</div>
@@ -38,6 +47,7 @@
                     ability to monetize your audience.
                 </div>
             </div>
+            <div class="feature-layout"></div>
         </div>
         <div class="page-feature__item page-feature__item-slide-2">
             <div class="feature-info">
@@ -49,6 +59,7 @@
                     campaign coverage.
                 </div>
             </div>
+            <div class="feature-layout"></div>
         </div>
         <div class="page-feature__item page-feature__item-slide-3">
             <div class="feature-info">
@@ -63,11 +74,19 @@
                     bulk API connections.
                 </div>
             </div>
+            <div class="feature-layout"></div>
         </div>
     </section>
     <footer class="footer">
         <div class="footer-menu__wrap">
             <div class="content-wrap">
+                <div class="menu-hamburger__wrap">
+                    <div class="menu-hamburger" id="footer-hamburger">
+                        <span class="icon-hamburger"></span>
+                        <span class="icon-hamburger"></span>
+                        <span class="icon-hamburger"></span>
+                    </div>
+                </div>
                 <ul class="footer-menu">
                     <li><a href="#">Publishers</a></li>
                     <li><a href="#">Our Stats</a></li>
@@ -90,5 +109,6 @@
         </div>
     </footer>
 </div>
+<script src="js/common.js"></script>
 </body>
 </html>
