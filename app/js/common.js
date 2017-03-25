@@ -20,21 +20,13 @@
 
         [headerMenu,footerMenu].forEach(function(item){
            item.addEventListener('click', function(){
-               var targetMenu = this.parentNode.nextElementSibling;
+                var targetMenu = this.parentNode.nextElementSibling;
 
-               if (targetMenu.classList.contains('show')) {
-                   targetMenu.classList.remove('show');
-                   targetMenu.classList.add('hide');
-               }
-               else {
-                   targetMenu.classList.add('show');
-                   targetMenu.classList.remove('hide');
-               }
+               targetMenu.classList.toggle('show');
+
                if(item.id == 'header-hamburger') {
                    headerResize(header, target);
                }
-               //if(this.parentNode.nextElementSibling.classList)
-               //this.parentNode.nextElementSibling
            });
         });
     });
