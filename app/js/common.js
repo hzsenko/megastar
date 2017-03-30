@@ -18,16 +18,16 @@
             headerResize(header, target);
         };
 
-        [headerMenu,footerMenu].forEach(function(item){
-           item.addEventListener('click', function(){
+        [headerMenu, footerMenu].forEach(function (item) {
+            item.addEventListener('click', function () {
                 var targetMenu = this.parentNode.nextElementSibling;
 
-               targetMenu.classList.toggle('show');
+                targetMenu.classList.toggle('show');
 
-               if(item.id == 'header-hamburger') {
-                   headerResize(header, target);
-               }
-           });
+                if (item.id == 'header-hamburger') {
+                    headerResize(header, target);
+                }
+            });
         });
     });
 })();
