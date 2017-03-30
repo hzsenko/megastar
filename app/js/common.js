@@ -4,28 +4,43 @@
 
     var headerResize = function (header, target) {
         target.style.paddingTop = header.offsetHeight + 'px';
+        return header.offsetHeight;
     };
 
     document.addEventListener("DOMContentLoaded", function () {
         var header = document.getElementById('header'),
-            target = document.getElementById('content'),
-            headerMenu = document.getElementById('header-hamburger'),
-            footerMenu = document.getElementById('footer-hamburger');
+            content = document.getElementById('content'),
+            headerMenu = document.getElementById('header-menu'),
+            footerMenu = document.getElementById('footer-menu'),
+            headerHamburger = document.getElementById('header-hamburger'),
+            footerHamburger = document.getElementById('footer-hamburger');
 
-        headerResize(header, target);
+        headerResize(header, content);
 
         window.onresize = function () {
-            headerResize(header, target);
+            headerResize(header, content);
         };
 
-        [headerMenu, footerMenu].forEach(function (item) {
+        [headerHamburger, footerHamburger].forEach(function (item) {
             item.addEventListener('click', function () {
-                var targetMenu = this.parentNode.nextElementSibling;
+                var target = headerMenu;
+                if (item == footerHamburger) {
+                    target = footerMenu;
+                }
 
-                targetMenu.classList.toggle('show');
+                var targetUl = target.getElementsByTagName('ul')[0];
 
-                if (item.id == 'header-hamburger') {
-                    headerResize(header, target);
+                if (!target.offsetHeight) {
+                    target.style.height = targetUl.offsetHeight + 'px';
+                }
+                else {
+                    target.style.height = 0;
+                }
+
+                if (target == headerMenu) {
+                    setTimeout(function () {
+                        headerResize(header, content);
+                    }, 300);
                 }
             });
         });

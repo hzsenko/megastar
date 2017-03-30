@@ -11,21 +11,23 @@
 <body>
 <div class="wrapper">
     <header class="header" id="header">
-        <div class="header-action">
-            <div class="content-wrap">
-                <a href="#" class="header-action__lang">Languages: EN</a>
-                <a href="#" class="header-action__login">Log In</a>
+        <div class="header-mobile-level clearfix">
+            <div class="header-action">
+                <div class="content-wrap">
+                    <a href="#" class="header-action__lang">Languages: EN</a>
+                    <a href="#" class="header-action__login">Log In</a>
+                </div>
+            </div>
+            <div class="menu-hamburger__wrap top">
+                <div class="menu-hamburger" id="header-hamburger">
+                    <span class="icon-hamburger"></span>
+                    <span class="icon-hamburger"></span>
+                    <span class="icon-hamburger"></span>
+                </div>
             </div>
         </div>
-        <div class="header-menu__wrap">
+        <div class="header-menu__wrap" id="header-menu">
             <div class="content-wrap">
-                <div class="menu-hamburger__wrap">
-                    <div class="menu-hamburger" id="header-hamburger">
-                        <span class="icon-hamburger"></span>
-                        <span class="icon-hamburger"></span>
-                        <span class="icon-hamburger"></span>
-                    </div>
-                </div>
                 <ul class="header-menu">
                     <li class="header-menu__item"><a href="#">Publishers</a></li>
                     <li class="header-menu__item"><a href="#">Our Stats</a></li>
@@ -78,15 +80,15 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="footer-menu__wrap">
+        <div class="menu-hamburger__wrap">
+            <div class="menu-hamburger" id="footer-hamburger">
+                <span class="icon-hamburger"></span>
+                <span class="icon-hamburger"></span>
+                <span class="icon-hamburger"></span>
+            </div>
+        </div>
+        <div class="footer-menu__wrap" id="footer-menu">
             <div class="content-wrap">
-                <div class="menu-hamburger__wrap">
-                    <div class="menu-hamburger" id="footer-hamburger">
-                        <span class="icon-hamburger"></span>
-                        <span class="icon-hamburger"></span>
-                        <span class="icon-hamburger"></span>
-                    </div>
-                </div>
                 <ul class="footer-menu">
                     <li><a href="#">Publishers</a></li>
                     <li><a href="#">Our Stats</a></li>
@@ -95,12 +97,12 @@
                     <li><a href="#">Blog</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <div class="content-wrap">
-                    <a href="#" class="footer-social__item tw"></a>
-                    <a href="#" class="footer-social__item fa"></a>
-                    <a href="#" class="footer-social__item vk"></a>
-                </div>
+        </div>
+        <div class="footer-social">
+            <div class="content-wrap">
+                <a href="#" class="footer-social__item tw"></a>
+                <a href="#" class="footer-social__item fa"></a>
+                <a href="#" class="footer-social__item vk"></a>
             </div>
         </div>
         <div class="copyright">
@@ -109,6 +111,7 @@
         </div>
     </footer>
 </div>
+
 <script src="js/common.js"></script>
 </body>
 </html>
